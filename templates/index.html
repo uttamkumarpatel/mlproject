@@ -1,1 +1,49 @@
-<h1>Welcome to the home page</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exam Performance Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Animated background elements -->
+  <div class="bg-blob"></div>
+  <div class="bg-blob"></div>
+  
+  <div class="home-page">
+    <div class="header-content">
+      <h1>Student Performance Predictor</h1>
+      <p class="subtitle">Smart Analysis for Academic Success</p>
+    </div>
+
+    <div class="features">
+      <div class="feature-item">
+        <i class="fas fa-chart-line"></i>
+        <h3>Advanced Analytics</h3>
+        <p>Machine learning-powered predictions</p>
+      </div>
+      <div class="feature-item">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Student-Centric</h3>
+        <p>Personalized performance insights</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <p>Get started with our intelligent prediction system:</p>
+      <a href="/predictdata" class="btn btn-glow">
+        Start Prediction
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Confetti animation elements -->
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+  <div class="confetti"></div>
+</body>
+</html>

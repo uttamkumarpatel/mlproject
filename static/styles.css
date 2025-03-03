@@ -1,0 +1,296 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body: animated gradient background */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scrolling of the entire page */
+  padding: 10px;
+}
+
+/* Gradient animation keyframes */
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Landing Page styling (index.html) */
+.home-page {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeInUp 1s ease-out;
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Container for home.html */
+.login {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+  animation: fadeInUp 1s ease-out;
+  max-height: 90vh; /* Keep container within the viewport */
+  overflow-y: auto; /* In case of very small screens, allow internal scroll */
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+.home-page h1,
+.login h1 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.home-page p {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.login h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Form fields container: two columns on medium+ screens */
+.form-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+/*
+  On smaller screens, revert to a single column
+*/
+@media (max-width: 600px) {
+  .form-fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Each field block */
+.mb-3 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+/* Label styling */
+.form-label {
+  font-weight: 500;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+/* Input & Select styling */
+.form-control {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus state */
+.form-control:focus {
+  border-color: #23a6d5;
+  box-shadow: 0 0 6px rgba(35, 166, 213, 0.5);
+  outline: none;
+}
+
+/* Button styling */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background: #23a6d5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+/* Hover state */
+.btn:hover {
+  background: #1b85aa;
+  transform: scale(1.05);
+}
+
+/* Active state */
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Full-width submit button */
+.btn-primary {
+  width: 100%;
+}
+
+/* Prediction text styling */
+.login h2 {
+  margin-top: 1rem;
+  color: #444;
+  font-weight: 500;
+}
+
+/* Slightly adjust for very short or small screens */
+@media (max-height: 600px) {
+  .login {
+    padding: 1rem;
+  }
+  .login h1 {
+    font-size: 1.3rem;
+  }
+  .login h2 {
+    font-size: 1rem;
+  }
+  .form-control {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+
+
+
+/* Additional Styles for Enhanced Index Page */
+.bg-blob {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 20s infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(100px, 100px); }
+  50% { transform: translate(-50px, 150px); }
+  75% { transform: translate(-100px, -50px); }
+}
+
+.header-content {
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: -0.5rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-item {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item i {
+  font-size: 2rem;
+  color: #23a6d5;
+  margin-bottom: 1rem;
+}
+
+.cta-section {
+  margin-top: 2rem;
+}
+
+.btn-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-glow::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, 
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transform: rotate(45deg);
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0% { transform: translateX(-100%) rotate(45deg); }
+  100% { transform: translateX(100%) rotate(45deg); }
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  animation: confetti-fall 3s infinite;
+}
+
+@keyframes confetti-fall {
+  0% { transform: translateY(-100vh) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+.btn i {
+  margin-left: 0.8rem;
+  transition: transform 0.3s;
+}
+
+.btn:hover i {
+  transform: translateX(3px);
+}
+
+@media (max-width: 600px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+  
+  .bg-blob {
+    width: 300px;
+    height: 300px;
+  }
+}
